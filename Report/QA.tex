@@ -1,0 +1,64 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{hyperref}
+
+\title{Order Flow Imbalance Analysis}
+\author{Blockhouse Project}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Conceptual Questions on Order Flow Imbalance}
+
+\subsection{What's the motivation behind measuring OFI at multiple depth levels of the order book?}
+
+There are several compelling motivations for measuring OFI at multiple depth levels:
+
+\begin{itemize}
+    \item \textbf{Superior explanatory power:} The research demonstrates that integrated OFI (incorporating multiple levels) provides significantly higher explanatory power for price movements compared to best-level OFI alone. Table 3 in the paper shows integrated OFI explains 87.14\% of price variation versus 71.16\% for best-level OFI.
+    
+    \item \textbf{Stock-specific information patterns:} Different stocks exhibit varying patterns in how deeper levels influence price movements. Figure 2 reveals that for high-volume and low-volatility stocks, OFIs deeper in the limit order book receive more weight in explaining price movements, while for low-volume and large-spread stocks, best-level OFIs are more influential.
+    
+    \item \textbf{More complete market microstructure view:} Deeper levels of the order book contain valuable information about potential supply and demand that isn't visible at the best bid/ask level. This additional information helps better explain and forecast price dynamics.
+    
+    \item \textbf{Reduced need for cross-asset terms:} Once multi-level OFI information is incorporated, the authors found that cross-impact terms don't provide additional explanatory power, suggesting that deeper order book levels already capture the relevant information.
+\end{itemize}
+
+\subsection{Why do the authors use Lasso regression rather than OLS for estimating cross-impact?}
+
+The authors employ Lasso regression instead of OLS for several compelling reasons:
+
+\begin{itemize}
+    \item \textbf{Dimensionality challenge:} With approximately 100 stocks in the universe, OLS regression becomes ill-posed when there are fewer observations than parameters. For intraday analysis with short estimation windows (e.g., 30 minutes), this is a significant concern.
+    
+    \item \textbf{Multicollinearity issues:} Figure 3 shows significant correlation between cross-asset OFIs (approximately 10\% of correlations are larger than 0.30), which contradicts the necessary condition for a well-posed OLS regression.
+    
+    \item \textbf{Sparsity assumption:} The authors hypothesize that only a small number of assets have significant impact on a specific stock, rather than the entire universe. Lasso inherently performs variable selection to identify this sparse set of meaningful relationships.
+    
+    \item \textbf{Regularization benefits:} Lasso performs both variable selection and regularization, enhancing prediction accuracy and interpretability of the regression models by shrinking less important coefficients to exactly zero.
+\end{itemize}
+
+\subsection{Why is OFI considered a better indicator than trade volume for predicting short-term returns?}
+
+\begin{itemize}
+    \item \textbf{Net impact measurement:} OFI measures the net directional pressure on prices (buy vs. sell imbalance), whereas volume alone doesn't distinguish direction and can be high during periods of balanced trading with minimal price impact.
+\end{itemize}
+
+OFI offers several advantages over traditional trade volume for predicting short-term returns:
+
+\begin{itemize}
+    \item \textbf{Comprehensive order dynamics:} OFI captures not only executed trades but also limit order placements and cancellations, providing a more complete picture of supply and demand pressures in the market.
+    
+    \item \textbf{Forward-looking indicator:} While trade volume only reflects completed transactions, OFI incorporates information about the evolving order book, including orders that haven't yet executed but may influence future price movements.
+    
+    \item \textbf{Empirical performance:} The paper cites previous research (Cont et al. 2014, Kolm et al. 2023) showing that "forecasting deep learning models trained on OFIs significantly outperform most models trained directly on order books or returns".
+    
+    \item \textbf{Multi-level information:} By incorporating information from multiple levels of the order book, OFI provides a richer signal about potential price movements than simple trade volume, which doesn't capture the structure of resting orders.
+    
+    \item \textbf{Net impact measurement:} OFI measures the net directional pressure on prices (buy vs. sell imbalance), whereas volume alone doesn't distinguish direction and can be high during periods of balanced trading with minimal price impact.
+\end{itemize}
+
+\end{document}
