@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.9.19)  2 MAY 2025 14:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.9.19)  2 MAY 2025 15:24
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -291,38 +291,22 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-08-30>
  ***********
-
-
-Package rerunfilecheck Warning: File `QA.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `QA.out':
-(rerunfilecheck)             Before: 8A1E256897DEA55EC795AF825D4F2850;1573
-(rerunfilecheck)             After:  261D588D53E072768C1C38858FAA5EA4;1878.
+Package rerunfilecheck Info: File `QA.out' has not changed.
+(rerunfilecheck)             Checksum: 261D588D53E072768C1C38858FAA5EA4;1878.
  ) 
 Here is how much of TeX's memory you used:
- 9669 strings out of 473579
- 147179 string characters out of 5725724
- 542974 words of memory out of 5000000
- 32451 multiletter control sequences out of 15000+600000
+ 9667 strings out of 473579
+ 147148 string characters out of 5725724
+ 542977 words of memory out of 5000000
+ 32452 multiletter control sequences out of 15000+600000
  564568 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,6n,79p,628b,511s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-pdfTeX warning (dest): name{subsection.0.3} has been referenced but does not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsection.0.2} has been referenced but does not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsection.0.1} has been referenced but does not exist, replaced by a fixed one
-
+ 75i,6n,79p,637b,511s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <d:/Applications/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><d:/Applications/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><d:/Applications/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><d:/Applications/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><d:/Applications/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><d:/Applications/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on QA.pdf (3 pages, 88485 bytes).
+Output written on QA.pdf (3 pages, 88536 bytes).
 PDF statistics:
  71 PDF objects out of 1000 (max. 8388607)
  53 compressed objects within 1 object stream
- 11 named destinations out of 1000 (max. 500000)
- 25 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 8 named destinations out of 1000 (max. 500000)
+ 33 words of extra memory for PDF output out of 10000 (max. 10000000)
 
