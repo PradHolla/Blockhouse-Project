@@ -41,6 +41,13 @@ Uses Principal Component Analysis (PCA) to combine information from multiple lev
 ### Cross-Asset OFI
 Implements LASSO regression to model the impact of OFIs from multiple assets on each other's returns, with a focus on identifying sparse cross-impact relationships.
 
+## Running the Code
+To run the code, enter the following command in your terminal:
+
+```bash
+python OFI.py
+```
+
 
 ## Key Findings
 From the conceptual analysis:
